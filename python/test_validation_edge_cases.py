@@ -34,6 +34,13 @@ def main():
         ["Not enough inventory for Mouse"],
     )
 
+    # Bug #1: a quantity of 0 is not positive
+    run_case(
+        "#1 Keyboard qty 0 rejected",
+        [{"product_id": "P100", "quantity": 0}],
+        ["Quantity must be positive for Keyboard"],
+    )
+
     print("All validation edge cases passed.")
 
 

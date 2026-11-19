@@ -7,7 +7,7 @@ def coupon_discount_amount(coupon_code, subtotal):
     if coupon_code is None:
         return 0
 
-    code = coupon_code.upper()
+    code = str(coupon_code).strip().upper()
 
     if code == "SAVE10":
         return 10

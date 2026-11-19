@@ -41,6 +41,13 @@ def main():
         ["Quantity must be positive for Keyboard"],
     )
 
+    # Bug #2: bool is a subclass of int, so True must be rejected explicitly
+    run_case(
+        "#2 Keyboard qty True rejected",
+        [{"product_id": "P100", "quantity": True}],
+        ["Invalid quantity for Keyboard"],
+    )
+
     print("All validation edge cases passed.")
 
 

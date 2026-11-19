@@ -27,6 +27,13 @@ def main():
         ["Not enough inventory for Mouse"],
     )
 
+    # Bug #4: repeated product lines must be checked against stock combined
+    run_case(
+        "#4 Mouse 3 + Mouse 3 exceeds stock 4",
+        [{"product_id": "P101", "quantity": 3}, {"product_id": "P101", "quantity": 3}],
+        ["Not enough inventory for Mouse"],
+    )
+
     print("All validation edge cases passed.")
 
 
